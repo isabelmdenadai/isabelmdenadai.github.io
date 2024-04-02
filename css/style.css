@@ -1,0 +1,386 @@
+@font-face {
+    font-family: 'Maharlika';
+    src: url('maharlika-regular.ttf') format('truetype');
+}
+
+
+:root {
+    --titleFont: 'Maharlika', sans-serif;
+    --textFont: 'Tenor Sans', sans-serif;
+    --gold: #D69607;
+    --titleSize: 40px;
+    --coverSize:20px;
+    --buttonSize: 18px;
+    --subTitleSize: 18px;
+    --textSize: 15px;
+    --2titleSize: 50px;
+    --2coverSize: 28px;
+    --2subtitleSize: 30px;
+    --2textSize: 18px;
+    
+}
+
+
+/* Reset default margin and padding */
+html, body {
+    margin: 0; /* Removes the default margin around the <html> and <body> elements */
+    padding: 0; /* Removes the default padding inside the <html> and <body> elements */
+    width: 100%; /* Sets the width of the <html> and <body> elements to 99% of the viewport width */
+    height: 99%; /* Sets the height of the <html> and <body> elements to cover 100% of the viewport height */
+    box-sizing: border-box; /* Changes the CSS box model to include padding and border in the element's total width and height */
+}
+
+
+.main-container {
+    display: flex; /* Establishes a flex container to enable a flexible box layout */
+    flex-direction: column; /* Arranges the container's children (items) in a vertical column */
+    width: 100%; /* Sets the width of the container to occupy 100% of its parent element's width */
+    margin: 0; /* Removes the default margin around the container */
+    padding: 0; /* Removes the default padding inside the container */
+    box-sizing: border-box; /* Adjusts the box model to include padding and border in the element's total width and height */
+}
+
+
+/* Main Page Container */
+.main-page-container {
+    display: flex;
+    flex-direction: column;
+    width: 99%;
+    height: 99%; /* Adjust based on header size */
+    justify-content: flex-start; /* Adjusts children spacing dynamically */
+    box-sizing: border-box; /* Include padding in height calculation */
+    align-items: center;
+}
+
+.homeimage-container {
+    width: 96%;
+    height: 45vh; /* Dynamically adjust based on viewport height */
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    margin-bottom: 2%;
+}
+.homeimage-container img {
+    max-width: 100%; /* Image will resize to fit container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.homecontent-container {
+    width: 100%;
+    height: 45vh; /* Dynamically adjust based on viewport height */
+    justify-content:flex-start; /* This will distribute space more evenly */
+    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    display: flex;
+}
+
+
+#textClinica {
+    font-family: var(--titleFont);
+    font-size: var(--titleSize); /* Title size */
+    margin-bottom: 15%;
+    
+}
+
+#textSaude {
+    font-family: var(--titleFont);
+    font-size: var(--coverSize); /* Subtitle size */
+    
+}
+
+.agende-button {
+    font-family: var(--textFont); /* Uses a custom property for font family, making it easy to maintain consistency */
+    font-size: var(--buttonSize); /* Sets the font size of the button text */
+    color: var(--gold); /* Uses a custom property for text color, providing a theme-based color */
+    padding: 10px 20px; /* Adds padding around the text inside the button for better visual spacing */
+    border: 3px solid var(--gold); /* Sets the border color using the same custom property as the text color */
+    border-radius: 60px; /* Rounds the corners of the button to create a pill shape */
+    margin-bottom: 130px; /* Adds space below the button to separate it from subsequent content */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button to indicate it's clickable */
+    display: inline-block; /* Allows the button to sit inline with other elements but also apply padding and margins */
+    text-decoration: none; /* Removes underline from the text, common for anchor elements styled as buttons */
+    transition: background-color 0.3s, color 0.3s, transform 0.1s, box-shadow 0.1s; /* Animates color, transform, and box-shadow changes for smooth visual effects */
+    box-shadow: 0 3px #919090; /* Adds a shadow below the button to create a sense of depth */
+}
+
+
+.agende-button:hover {
+    background-color: var(--gold);
+    color: white;
+}
+
+.agende-button:active {
+    transform: scale(0.95); /* Slightly reduce the size of the button */
+    box-shadow: 0 2px #666; /* Reduces shadow to give a pressed effect */
+    border-color: var(--gold); /* Keeps the border color consistent */
+}
+
+/* A Clinica Page*/
+
+.aclinica-container {
+    width: 100%;
+    height: 40vh; /* Dynamically adjust based on viewport height */
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#tituloAClinica{    
+    font-family: var(--titleFont);
+    font-size: var(--subTitleSize); /* Title size */
+    margin-left: 6%;
+}
+
+
+#textAClinica {
+    font-family: var(--textFont);
+    font-size: var(--textSize); 
+    text-align: justify; /* Justifies the text */
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 6%;
+}
+
+.aclinicaimage-container {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-around; /* Center children vertically in the container */
+    align-items: center; /* Center children horizontally in the container */
+    width: 100%; /* Adjust width to account for padding */
+    height: 60vh; /* Adjust height as needed */
+    padding: 30px; /* Add padding around the container */
+    box-sizing: border-box; /* Include padding in the element's total dimensions */
+
+}
+
+#aclinicaimage-container video {
+    width: 100%; /* Video takes the full width of its container, now accounting for padding */
+    height: auto; /* Maintain aspect ratio */
+    border: none;
+}
+
+#aclinicaimage-container img {
+    width: 100%; /* Video takes the full width of its container, now accounting for padding */
+    height: auto; /* Maintain aspect ratio */
+    border: none;
+}
+
+/* Corpo Clinico Page */
+.corpoclinico-container{
+    width: 100%;
+    height: 80vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#tituloCorpoClinico {
+    font-family: var(--titleFont);
+    font-size: var(--subTitleSize); /* Title size */
+    margin-left: 6%;
+}
+
+#textCorpoClinico {
+    font-family: var(--textFont);
+    font-size:  calc(var(--textSize) - 1px); 
+    padding-left: 12%;
+    padding-right: 6%;
+    padding-top: 6%;
+    text-align: justify; /* Justifies the text */
+    line-height: 1.2;
+    list-style-type: disc;
+}
+
+.corpoclinico-description-container {
+    font-family: var(--textFont);
+    font-size: calc(var(--textSize) - 3px); 
+    text-align: center; /* Center the text of the container */
+}
+
+.localizacao-container {
+    width: 100%;
+    height: 40vh; /* Dynamically adjust based on viewport height */
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+}
+#tituloLocalizacao{    
+    font-family: var(--titleFont);
+    font-size: var(--subTitleSize); /* Title size */
+    margin-left: 6%;
+}
+
+#textLocalizacao {
+    font-family: var(--textFont);
+    font-size: calc(var(--textSize) - 1px); 
+    text-align: center;
+    margin-top: 5px;
+}
+
+.localizacaomap-container {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-around; /* Center children vertically in the container */
+    align-items: center; /* Center children horizontally in the container */
+    width: 100%; /* Adjust width to account for padding */
+    height: 54vh; /* Adjust height as needed */
+    padding: 30px; /* Add padding around the container */
+    box-sizing: border-box; /* Include padding in the element's total dimensions */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional shadow for better visibility */
+    overflow: hidden; /* Adjust based on your preference */
+}
+
+    .agendamentocontent-container {
+        width: 100%;
+        height: 45vh; /* Dynamically adjust based on viewport height */
+        display: flex;
+        flex-direction: column; 
+        position: relative;
+    }
+
+#tituloAgendamento { 
+    font-family: var(--titleFont);
+    font-size: var(--subTitleSize); /}
+
+#textClique {
+    font-family: var(--textFont);
+    font-size: var(--textSize); 
+    align-items: center;
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps the text color consistent with the surrounding text */
+    pointer-events: none /* Prevents clicking on the link */
+}
+
+
+/* Tablet screens (between 768px and 1024px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .homeimage-container {
+        width: 100%;
+        height: 100%;       
+    }
+    .homecontent-container{
+        margin-top: 3%;
+        height: 97%;
+    }
+    #textClinica {
+        font-size: var(--2titleSize); /* Title size */
+    }
+    #textSaude {
+        font-size: var(--2subtitleSize); /* Subtitle size */
+        margin-top: 0%;
+        margin-bottom: 7%;
+        /* Additional styling as needed */
+    }
+
+}
+
+/* Laptop screens (above 1024px) */
+@media (min-width: 1024px) {
+    .main-page-container {
+        flex-direction: row; /* Switch to column layout for smaller screens */
+        justify-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        margin-top: 3%;
+        
+    }
+    .homeimage-container {
+        width: 110%;
+        height: 120%;       
+        margin: auto;
+    }
+    .homecontent-container{
+        margin-top: 3%;
+        height: 97%;
+        margin: auto;
+    }
+    #textClinica {
+        font-size: var(--2titleSize); /* Title size */
+    }
+    #textSaude {
+        font-size:  var(--2coverSize); /* Subtitle size */
+        margin-top: 5%;
+        /* Additional styling as needed */
+    }
+
+    .aclinica-container {
+        width: 100%;
+        height: 100%; /* Dynamically adjust based on viewport height */
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 2%;
+    }
+
+    #tituloAClinica{ 
+    font-size: var(--2subtitleSize);
+    margin-left: 0%;
+    margin-bottom: 3%;
+    }
+
+    #textAClinica {
+        padding: 60px;
+        padding-right: 200px;
+        font-size: var(--2textSize);
+        padding: 0px;
+        margin-right: 30%;
+    }
+
+    .aclinicaimage-container {
+        height:97%;
+    }
+
+    .corpoclinico-container{
+        width: 100%;
+        height: 100%; /* Dynamically adjust based on viewport height */
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 2%;
+    }
+
+    #tituloCorpoClinico {
+    font-size: var(--2subtitleSize); /* Title size */
+    margin-left: 0%;
+}
+    #textCorpoClinico {
+    font-size:  calc(var(--2textSize) - 1px); 
+    margin-left: 0%;
+    padding: 1%;
+}
+
+    .corpoclinico-description-container {
+        font-size: calc(var(--2textSize) - 3px); 
+}
+    #tituloLocalizacao{    
+        font-size: var(--2subtitleSize); /* Title size */
+        margin-left: 3%;
+    }
+
+    #textLocalizacao {
+        font-size: var(--2textSize);
+} 
+    .localizacaomap-container {
+        width: 70%;
+        padding: 50px;
+        margin-right: 2.5%;
+    }
+
+    .agendamentocontent-container {
+        margin-top: 3%;
+        height: 97%;
+        margin: auto;
+    }
+    
+    #tituloAgendamento { 
+        font-size: var(--2subtitleSize);
+        margin-bottom: 10%;
+    }
+    
+    #textClique {
+        font-size: var(--2textSize);
+        margin-bottom: 15%;
+    }
+
+}

@@ -1,0 +1,192 @@
+.logo-menu.top-container {
+    display: flex;
+    justify-content: space-between; /* Space out logo and menu icon */
+    align-items: center;
+    width: 100%;
+    max-height: 5%; /* Set a maximum height for the container */
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-left: 3.5%;
+}
+
+.menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 13%;
+    margin-right: 6%;
+}
+
+.logo-container img, .menu-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+nav.menu-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between items */
+    align-items: center; /* Align items vertically in the center */
+    margin-left: auto; /* Push the container to the right */
+    width: 45%; /* Set the width of the container to 40% of its parent */
+    margin-right: 3%;
+}
+
+.text-box {
+    font-family: var(--textFont);
+    font-size: 17px;
+    color: #000;
+    flex-shrink: 1;
+    /* Remove margin and padding adjustments if you want equal spacing handled by flex container */
+}
+
+
+.text-box a {
+    color: #000;
+    text-decoration: none;
+}
+
+.text-box:hover a, .text-box.dropdown:hover > a {
+    color: var(--gold);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 370px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.menu-container .dropdown .dropdown-content a {
+    color: var(--gold);
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    font-family: var(--textFont);
+}
+
+.menu-container .dropdown .dropdown-content a:hover {
+    background-color: var(--gold);
+    color: white;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover a {
+    color: #000;
+}
+
+
+.mobilemenu-container {
+    /* General styling for the mobile menu container */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+
+}
+
+
+.menu-item {
+    /* Styling for each menu item */
+    margin: 10px 0;
+}
+
+.menu-item a {
+    /* Styling for links in the menu */
+    text-decoration: none;
+    font-weight: bold;
+    color: #D69607 ; /* Black text for links */
+    font-family: 'Tenor Sans', sans-serif;
+}
+
+.special-item a {
+    /* Unique styling for "Corpo Clinico" */
+    
+    color:#414141 ; /* Use a distinctive color or any other style */
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+    nav.menu-container {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+/* Tablet screens (between 768px and 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .logo-menu.top-container {
+        height: 5%;
+        margin-bottom: 2%;
+    }
+    nav.menu-container {
+        display: none;
+    }
+    .logo-container {
+        width: 13%;
+    }
+    .menu-icon {
+        display: block;
+        width: 8%;
+    
+        
+    }
+    
+
+}
+
+/* Laptop screens (above 1024px) */
+@media (min-width: 1025px) {
+    .logo-menu.top-container {
+        max-height: 25%;
+    }
+    .logo-container {
+        width: 6%;
+        margin-left: 1%;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+    .menu-container {
+        display: flex;
+    }
+    .text-box {
+        font-size: 20px;
+    }
+}

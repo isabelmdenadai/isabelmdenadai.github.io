@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Clinica de Nadai</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/logomenu_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <!-- Main outer container -->
+    <div class="main-container">
+        <!-- Placeholder for dynamically loaded menu -->
+        <div id="menu-container"></div>
+        <!-- Mobile Menu Content -->
+        <div class="mobilemenu-container">
+            <!-- Home -->
+            <div class="menu-item">
+                <a href="../index.html">Home</a>
+            </div>
+            <!-- A Clinica -->
+            <div class="menu-item">
+                <a href="aclinica_page.html">A Clínica</a>
+            </div>
+            <!-- Ginecologia Diagnostica e Preventiva -->
+            <div class="menu-item special-item">
+                <a href="ginecologia_page.html">Ginecologia Diagnóstica e Preventiva</a>
+            </div>
+            <!-- Obstetricia -->
+            <div class="menu-item special-item">
+                <a href="obstetricia_page.html">Obstetrícia</a>
+            </div>
+            <!-- Climatrio -->
+            <div class="menu-item special-item">
+                <a href="climaterio_page.html">Climatério</a>
+            </div>
+            <!-- Cirurgia minimamente invasiva -->
+            <div class="menu-item special-item">
+                <a href="cirurgia_page.html">Cirurgia Minimamente Invasiva</a>
+            </div>
+            <!-- Laser vaginal -->
+            <div class="menu-item special-item">
+                <a href="laser_page.html">Laser Vaginal</a>
+            </div>
+            <!-- Corpo Clinico -->
+            <div class="menu-item">
+                <a href="corpoclinico_page.html">Corpo Clínico</a>
+            </div>            
+            <!-- Localizacao -->
+            <div class="menu-item">
+                <a href="localizacao_page.html">Localização</a>
+            </div>
+            <!-- Agendamento -->
+            <div class="menu-item">
+                <a href="agendamento_page.html">Agendamento</a>
+            </div>
+            <!-- Additional menu items here -->
+        </div>
+    </div>
+
+    <script>
+        // Load the menu from logo_menu.html into the placeholder div
+        fetch('logo_menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-container').innerHTML = data;
+            });
+    </script>
+
+    <script src="../javascript/toggleMenu.js"></script>
+
+
+</body>
+</html>
